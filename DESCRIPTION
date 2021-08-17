@@ -1,0 +1,44 @@
+Package: bsPDP
+Title: Bootstrapped PDPs with Confidence Intervals 
+Version: 0.1.1
+Authors@R: 
+  person(given = "James",
+         family = "Bang",
+         role = c("aut", "cre"),
+         email = "bangecon@gmail.com",
+         comment = c(ORCID = "0000-0002-7701-8220"))
+  person(given = "Olga",
+         family = "Yakusheva",
+         role = "ctb")
+Author: James Bang [aut, cre], 
+  Olga Yakusheva [ctb]
+Maintainer: James Bang <bangecon@gmail.com>    
+Description: This is a collection of functions for inference machine learning and other methods 
+  using partial dependence plots.
+Functions include: 
+    bsPDP() to bootstrap a predictive model for the purpose of computing confidence intervals. 
+    bsPDP.lm() implements bsPDP for simple least-squares linear models
+    bsPDP.glm() implements bspdp for generalized linear models
+    bsPDP.randomForest() implements bsPDP with the randomForest package
+    bsPDP.caret() implements bsPDP with the caret package (and corresponding methods)
+    bsPDP.BayesTree() and bsPDP.dbarts implements bsPDP for BART (dbarts is faster). 
+    bsPDP.iptw_est() for the inverse probability of treatment weights estimator. 
+    bsPDP.hi_est() for the Hirano and Imbens (2004) estimator. 
+    plot_bsPDP() to plot the bootstrapped PDPs.
+License: use_gpl3_license()
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+  R (>= 4.0.0),
+  ggplot2 (>= 3.3.3),
+  matrixStats (>= 0.59.0)
+Imports:   
+  doParallel (>= 1.0.16), 
+  doRNG (>= 1.8.2), 
+  randomForest, 
+  dbarts,
+  caret, 
+  BayesTree
+Suggests: 
